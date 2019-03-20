@@ -9,35 +9,7 @@ package Model;
  *
  * @author fabio
  */
-public class Medico extends Pessoa implements IFolhaPagamento{
-    private String crm;
-    private String celular;
-    private String especialidade;
-
-    public String getCrm() {
-        return crm;
-    }
-
-    public void setCrm(String crm) {
-        this.crm = crm;
-    }
-
-    public String getCelular() {
-        return celular;
-    }
-
-    public void setCelular(String celular) {
-        this.celular = celular;
-    }
-
-    public String getEspecialidade() {
-        return especialidade;
-    }
-
-    public void setEspecialidade(String especialidade) {
-        this.especialidade = especialidade;
-    }
-
+public abstract class Funcionario extends Pessoa implements IFolhaPagamento{
     @Override
     public float calcularINSS() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -62,6 +34,5 @@ public class Medico extends Pessoa implements IFolhaPagamento{
     public float salvarFolha() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
     
 }
