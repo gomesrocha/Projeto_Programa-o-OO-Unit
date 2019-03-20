@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author fabio gomes rocha
+ * @author fabio Gomes Rocha
  */
 public class PacienteTest {
     
