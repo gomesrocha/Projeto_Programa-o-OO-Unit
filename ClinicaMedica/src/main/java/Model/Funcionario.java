@@ -9,7 +9,8 @@ package Model;
  *
  * @author fabio
  */
-public abstract class Funcionario extends Pessoa implements IFolhaPagamento{
+public abstract class Funcionario extends Pessoa implements IFolhaPagamento {
+
     @Override
     public float calcularINSS() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -34,5 +35,5 @@ public abstract class Funcionario extends Pessoa implements IFolhaPagamento{
     public float salvarFolha() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

@@ -10,9 +10,14 @@ package Model;
  * @author fabio
  */
 public interface IFolhaPagamento {
+
     public float calcularINSS();
+
     public float calcularIRRF();
+
     public float calcularDescontos();
+
     public float calcularSalarioLiquido();
+
     public float salvarFolha();
 }

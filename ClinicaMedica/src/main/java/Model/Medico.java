@@ -5,11 +5,14 @@
  */
 package Model;
 
+import Utils.BancoDeDados;
+
 /**
  *
  * @author fabio
  */
-public class Medico extends Pessoa implements IFolhaPagamento{
+public class Medico extends Pessoa implements IFolhaPagamento {
+
     private String crm;
     private String celular;
     private String especialidade;
@@ -62,6 +65,4 @@ public class Medico extends Pessoa implements IFolhaPagamento{
     public float salvarFolha() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
 }

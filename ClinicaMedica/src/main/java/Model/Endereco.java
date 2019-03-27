@@ -10,6 +10,7 @@ package Model;
  * @author fabio
  */
 public class Endereco {
+
     private String logradouro;
     private String numero;
     private String complemento;
@@ -73,6 +74,5 @@ public class Endereco {
     public void setUf(String uf) {
         this.uf = uf;
     }
-    
-    
+
 }

@@ -12,6 +12,7 @@ import java.util.Date;
  * @version 0.1rc1
  */
 public class Pessoa {
+
     private String nome;
     private String email;
     private String fone;
@@ -75,7 +76,5 @@ public class Pessoa {
     public void setFone(String fone) {
         this.fone = fone;
     }
-    
-    
-    
+
 }

@@ -11,7 +11,8 @@ import java.util.Date;
  *
  * @author fabio
  */
-public class Paciente extends Pessoa{
+public class Paciente extends Pessoa {
+
     private Date dataCadastro;
     private String convenio;
     private String sexo;
@@ -39,6 +40,5 @@ public class Paciente extends Pessoa{
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
-    
-    
+
 }

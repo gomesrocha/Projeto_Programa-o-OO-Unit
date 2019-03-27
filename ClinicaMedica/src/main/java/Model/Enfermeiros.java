@@ -5,8 +5,6 @@
  */
 package Model;
 
-
 public class Enfermeiros extends Funcionario {
 
-    
 }

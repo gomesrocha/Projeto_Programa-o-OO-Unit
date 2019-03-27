@@ -5,6 +5,9 @@
  */
 package View;
 
+import Model.Dao.MedicoDao;
+import Model.Medico;
+
 /**
  *
  * @author fabio
@@ -139,6 +142,11 @@ public class TelaMedico extends javax.swing.JFrame {
         });
 
         btCadastrar.setText("Cadastrar");
+        btCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCadastrarActionPerformed(evt);
+            }
+        });
 
         btLimpar.setText("Limpar");
 
@@ -236,11 +244,12 @@ public class TelaMedico extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(txtEspecialidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCRM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(txtTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtCRM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel5)
+                        .addComponent(txtTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -290,6 +299,14 @@ public class TelaMedico extends javax.swing.JFrame {
     private void txtDtNascActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDtNascActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDtNascActionPerformed
+
+    private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
+        // TODO add your handling code here:
+        MedicoDao mc = new MedicoDao();
+        Medico md = new Medico();
+        md.setNome(txtNome.getText());
+        mc.salvar(md);
+    }//GEN-LAST:event_btCadastrarActionPerformed
 
     /**
      * @param args the command line arguments
